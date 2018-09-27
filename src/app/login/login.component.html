@@ -1,0 +1,27 @@
+<div  fxFlex="column" fxFlexAlign="center">
+  <mat-toolbar>
+    <span>LOGIN</span>
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+      <form name="myform" #myform="ngForm" (ngsubmit)="signup()" fxLayout="row">
+        <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" [(ngModel)]="x.email" name="email" required>
+        </mat-form-field><br>
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" [(ngModel)]="x.password" name="password" required>
+        </mat-form-field>
+      </form> 
+    </mat-card-content>
+    <button type="submit" mat-raised-button color="primary" [disabled]="myform.invalid">submit</button>
+  </mat-card>
+</div>
+
+
+<!-- <div fxFlex="row">
+  <div fxFlex fxLayout="column" fxFlexAlign="center">
+    <button mat-button>hii</button>
+  </div>
+</div> -->

@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <span>Registration</span>
+</mat-toolbar>
+<mat-card-content>
+  <form name="myform" #myform="ngForm" (ngsubmit)="userSignup()" fxFlexAlign="center">
+    <mat-form-field class="full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First name" [(ngModel)]="x.fname" name="fname" required>
+    </mat-form-field><br>
+    <mat-form-field class="full-width">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" [(ngModel)]="x.lname" name="lname" required>
+    </mat-form-field><br>
+    <mat-form-field class="full-width">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Address" [(ngModel)]="address" name="address" required>
+    </mat-form-field><br>
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" [(ngModel)]="x.email" name="email" required>
+    </mat-form-field><br>
+    <mat-form-field class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" [(ngModel)]="x.password" name="password" required>
+    </mat-form-field><br>
+    <button type="submit" mat-raised-button color="primary" [disabled]="myform.invalid">REGISTER</button>
+  </form>
+</mat-card-content>
